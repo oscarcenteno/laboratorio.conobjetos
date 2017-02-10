@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laboratorio.Negocio", "Labo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laboratorio.Negocio.UnitTests", "Laboratorio.Negocio.UnitTests\Laboratorio.Negocio.UnitTests.csproj", "{0D5B1ACB-1DAB-4D24-8158-DEC93EE694AB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Diagramas de funciones", "Diagramas de funciones", "{FF399660-D7EF-4E05-9FDD-F303AC425485}"
+	ProjectSection(SolutionItems) = preProject
+		laboratorio-con-funciones-arboles-de-llamados.pptx = laboratorio-con-funciones-arboles-de-llamados.pptx
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
