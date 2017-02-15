@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Negocio.CodigosDeReferencia.ConObjetos
 {
@@ -37,7 +37,10 @@ namespace Negocio.CodigosDeReferencia.ConObjetos
 
         private static string AjusteElAño(int elAño)
         {
-            return elAño.ToString("D4");
+            if (elAño < 1000)
+                return elAño.ToString("D4");
+            else
+                return elAño.ToString();
         }
 
         private static string OtengaElMesAjustado(DateTime laFecha)
@@ -54,24 +57,30 @@ namespace Negocio.CodigosDeReferencia.ConObjetos
 
         private static string AjusteElMes(int elMes)
         {
-            return elMes.ToString("D2");
+            if (elMes < 10)
+                return elMes.ToString("D2");
+            else
+                return elMes.ToString();
         }
 
         private static string ObtengaElDiaAjustado(DateTime laFecha)
         {
-            int elDia = ObtengaElDia(laFecha);
+            int elDia = ExtraigaElDia(laFecha);
 
             return AjusteElDia(elDia);
         }
 
-        private static int ObtengaElDia(DateTime laFecha)
+        private static int ExtraigaElDia(DateTime laFecha)
         {
             return laFecha.Day;
         }
 
         private static string AjusteElDia(int elDia)
         {
-            return elDia.ToString("D2");
+            if (elDia < 10)
+                return elDia.ToString("D2");
+            else
+                return elDia.ToString();
         }
 
         private static string FormateeLaFecha(string elAñoAjustado, string elMesAjustado, string elDiaAjustado)
@@ -81,17 +90,26 @@ namespace Negocio.CodigosDeReferencia.ConObjetos
 
         private static string AjusteElCliente(short elCliente)
         {
-            return elCliente.ToString("D3");
+            if (elCliente < 1000)
+                return elCliente.ToString("D3");
+            else
+                return elCliente.ToString();
         }
 
         private static string AjusteElSistema(short elSistema)
         {
-            return elSistema.ToString("D2");
+            if (elSistema < 100)
+                return elSistema.ToString("D2");
+            else
+                return elSistema.ToString();
         }
 
         private static string AjusteElConsecutivo(string elConsecutivo)
         {
-            return elConsecutivo.PadLeft(12, '0');
+            if (elConsecutivo.Length < 12)
+                return elConsecutivo.PadLeft(12, '0');
+            else
+                return elConsecutivo;
         }
 
         private static string FormateeElRequerimiento(string laFechaFormateada, string elClienteAjustado, string elSistemaAjustado, string elConsecutivoAjustado)
