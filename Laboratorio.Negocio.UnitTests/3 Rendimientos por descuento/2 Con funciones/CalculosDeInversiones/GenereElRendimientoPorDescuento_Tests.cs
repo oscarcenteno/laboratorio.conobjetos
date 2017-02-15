@@ -27,7 +27,7 @@ namespace Negocio.UnitTests.RendimientosPorDescuento_Tests.ConFunciones_Tests
             laFechaDeVencimiento = new DateTime(2016, 10, 10);
             laFechaActual = new DateTime(2016, 3, 3);
             tieneTratamientoFiscal = true;
-            elResultadoObtenido = CalculosDeRendimiento.GenereElRendimientoPorDescuento(
+            elResultadoObtenido = CalculosDeRendimiento.GenereElRendimientoPorDescuentoRedondeado(
                 elValorFacial,
                 elValorTransadoNeto,
                 laTasaDeImpuesto,
@@ -49,7 +49,7 @@ namespace Negocio.UnitTests.RendimientosPorDescuento_Tests.ConFunciones_Tests
             laFechaDeVencimiento = new DateTime(2016, 10, 10);
             laFechaActual = new DateTime(2016, 3, 3);
             tieneTratamientoFiscal = false;
-            elResultadoObtenido = CalculosDeRendimiento.GenereElRendimientoPorDescuento(
+            elResultadoObtenido = CalculosDeRendimiento.GenereElRendimientoPorDescuentoRedondeado(
                 elValorFacial,
                 elValorTransadoNeto,
                 laTasaDeImpuesto,
