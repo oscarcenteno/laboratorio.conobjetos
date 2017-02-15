@@ -4,19 +4,7 @@ namespace Negocio.ValoracionesPorISIN.ConObjetos
 {
     public class CalculosDeLaValoracionPorISIN
     {
-        public static ValoracionPorISIN GenereLaValoracionPorISIN(
-            string elISIN,
-            DateTime laFechaActual,
-            DateTime laFechaDeVencimientoDelValorOficial,
-            int losDiasMinimosAlVencimientoDelEmisor,
-            decimal elPorcentajeCobertura,
-            decimal elPrecioLimpioDelVectorDePrecios,
-            Monedas elTipoDeMoneda,
-            bool elSaldoEstaAnotadoEnCuenta,
-            decimal elMontoNominalDelSaldo,
-            decimal elTipoDeCambioDeUDESDeHoy,
-            decimal elTipoDeCambioDeUDESDeAyer
-            )
+        public static ValoracionPorISIN GenereLaValoracionPorISIN(string elISIN, DateTime laFechaActual, DateTime laFechaDeVencimientoDelValorOficial, int losDiasMinimosAlVencimientoDelEmisor, decimal elPorcentajeCobertura, decimal elPrecioLimpioDelVectorDePrecios, Monedas elTipoDeMoneda, bool elSaldoEstaAnotadoEnCuenta, decimal elMontoNominalDelSaldo, decimal elTipoDeCambioDeUDESDeHoy, decimal elTipoDeCambioDeUDESDeAyer)
         {
             ValoracionPorISIN laValoracion = new ValoracionPorISIN();
 

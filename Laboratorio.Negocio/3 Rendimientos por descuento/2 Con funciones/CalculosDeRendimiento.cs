@@ -4,7 +4,7 @@ namespace Negocio.RendimientosPorDescuento.ConFunciones
 {
     public static class CalculosDeRendimiento
     {
-        public static decimal GenereElRendimientoPorDescuento(decimal elValorFacial,
+        public static decimal GenereElRendimientoPorDescuentoRedondeado(decimal elValorFacial,
                 decimal elValorTransadoNeto,
                 decimal laTasaDeImpuesto,
                 DateTime laFechaDeVencimiento,
